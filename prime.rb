@@ -1,8 +1,9 @@
-def prime?(num)
-  n = 2
-  while n < num
-    return false if num % n == 0
-    n += 1
-  end
-  true
+def prime?(n)
+  return false if n < 2
+  return true if n == 3 || n == 2
+    if (2...n-1).any?{|i| n % i == 0}
+      false
+    else
+      true
+    end
 end
